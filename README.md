@@ -1,4 +1,8 @@
-# Form Data Object
+# Form Data Object [![gzipped size][badge-gzip]](#no-link) [![npm version][badge-version]][link-npm]
+    [badge-gzip]: https://badges.herokuapp.com/size/github/chrisboakes/form-data-object/master/dist/form-data-object.min.js
+    [badge-version]: https://img.shields.io/npm/v/form-data-object.svg
+    [link-npm]: https://www.npmjs.com/package/form-data-object
+
 > Creates a single FormData javascript object from multiple wrapper elements and encodes the data (optional) with no framework dependencies.
 
 - Fast and lightweight

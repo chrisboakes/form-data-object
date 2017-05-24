@@ -1,0 +1,42 @@
+{
+    "name": "form-data-object",
+    "version": "0.0.1",
+    "description": "Creates a single FormData javascript object from multiple wrapper elements and encodes the data (optional) with no framework dependencies.",
+    "main": "lib/form-data-object.min.js",
+    "scripts": {
+        "build": "webpack --env build",
+        "dev": "webpack --progress --colors --watch --env dev"
+    },
+    "devDependencies": {
+        "babel-cli": "6.24.1",
+        "babel-core": "6.24.1",
+        "babel-eslint": "7.2.3",
+        "babel-loader": "7.0.0",
+        "babel-plugin-add-module-exports": "0.2.1",
+        "babel-preset-es2015": "6.24.1",
+        "chai": "3.5.0",
+        "eslint": "3.19.0",
+        "eslint-loader": "1.7.1",
+        "mocha": "3.3.0",
+        "webpack": "2.4.1",
+        "yargs": "7.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chrisboakes/form-data-object"
+    },
+    "keywords": [
+        "formdata",
+        "form",
+        "javascript",
+        "es6",
+        "webpack",
+        "library"
+    ],
+    "author": "Chris Boakes",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/chrisboakes/form-data-object/issues"
+    },
+    "homepage": "https://github.com/chrisboakes/form-data-object"
+}

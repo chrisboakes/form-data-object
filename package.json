@@ -2,7 +2,7 @@
     "name": "form-data-object",
     "version": "0.0.1",
     "description": "Creates a single FormData javascript object from multiple wrapper elements and encodes the data (optional) with no framework dependencies.",
-    "main": "lib/form-data-object.min.js",
+    "main": "dist/form-data-object.min.js",
     "scripts": {
         "build": "webpack --env build",
         "dev": "webpack --progress --colors --watch --env dev"

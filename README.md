@@ -20,7 +20,7 @@ npm install --save form-data-object
 ## Usage
 1. Import the plugin
     ```js
-        import allFormData from 'form-data-plugin';
+        import allFormData from 'form-data-object';
     ```
 
 2. Instantiate the class and pass it your wrapper elements in an array. E.g.

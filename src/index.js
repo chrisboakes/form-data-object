@@ -1,14 +1,19 @@
 /**
  * Creates a form data object and values from multiple DOM wrappers and encodes them (if you want to)
- * @version 0.0.1
+ * @version 1.0.0
  * @author Chris Boakes modified from archived (https://code.google.com/archive/p/form-serialize/)
  * @param Array of wrapper elements - form
  * @param Boolean - encode - do we want to encodeURIComponent?
- * @return FormData Object
+ * @param jsObject - do we want this to be a javscript object instead of FormData object
+ * @return FormData Object or Javascript Object
  */
 export default class {
-    constructor(forms, encode) {
-        this.formData = new FormData();
+    constructor(forms, encode, jsObject) {
+        // By default, create a formData object, if not create an empty javascript object
+        this.formData = (typeof jsObject !== 'undefined' && jsObject === true) ? {} : new FormData();
+
+        // Is it a formData object?
+        this.isFormData = (typeof jsObject === 'undefined' || jsObject === false);
 
         // By default we want to encode the data
         this.encodeData = (typeof encode !== 'undefined') ? encode : true;
@@ -121,7 +126,12 @@ export default class {
             elementName = encodeURIComponent(elementName);
             elementValue = encodeURIComponent(elementValue);
         }
-        this.formData.append(elementName, elementValue);
+        // Append formData or javascript object
+        if (this.isFormData) {
+            this.formData.append(elementName, elementValue);
+        } else {
+            this.formData[elementName] = elementValue;
+        }
     }
 
     /**

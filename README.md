@@ -1,10 +1,10 @@
-# Form Data Object [![gzipped size][badge-gzip]](#no-link) [![npm version][badge-version]][link-npm]
+# Form Data Object [![badge-size]](#no-link) [![npm version][badge-version]][link-npm]
 
-[badge-gzip]: https://badges.herokuapp.com/size/github/chrisboakes/form-data-object/master/dist/form-data-object.min.js
+[badge-size]: http://img.badgesize.io/chrisboakes/form-data-object/master/dist/form-data-object.min.js
 [badge-version]: https://img.shields.io/npm/v/form-data-object.svg
 [link-npm]: https://www.npmjs.com/package/form-data-object
 
-> Creates a single FormData javascript object from multiple wrapper elements and encodes the data (optional) with no framework dependencies.
+> Creates a single FormData object (or generic javascript object - optional) from multiple wrapper elements and encodes the data (optional) with no framework dependencies.
 
 - Fast and lightweight
 - Doesn't rely on a form tag (you can use whichever wrapper tag you like)
@@ -40,6 +40,10 @@ npm install --save form-data-object
     ```js
         let myFormData = new allFormData([document.getElementById('my-form')], false);
     ```
+    maybe you want the data returned as a generic javascript object (instead of FormData)
+    ```js
+        let myFormData = new allFormData([document.getElementById('my-form')], true, true);
+    ```
 
 3. Call method to return the single FormData object. E.g.
     ```js
@@ -47,7 +51,7 @@ npm install --save form-data-object
     ```
 
 ## Parameters
-### `(wrappers, encode)`
+### `(wrappers, encode, jsObject)`
 
 <table>
     <tr>
@@ -68,6 +72,14 @@ npm install --save form-data-object
             Type: <code>boolean</code><br>
             Default: <code>true</code><br><br>
             Do you want the data to use Javascript's <code>encodeURIComponent()</code>       
+        </td>
+    </tr>
+    <tr>
+        <th><code>jsObject</code></th>
+        <td>
+            Type: <code>boolean</code><br>
+            Default: <code>false</code><br><br>
+            Do you want to return a generic Javascript object instead of a <code>FormData()</code> object?
         </td>
     </tr>
 </table>
